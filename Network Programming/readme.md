@@ -42,7 +42,7 @@ Code 3: client.py
 * For the local ip address 127.0.0.1, If we want to test, then we just release it from comments 
 
 9. Output → Successful Ping-Pong:  
-   ![first][image1]  
+   ![ ][https://cdn.discordapp.com/attachments/1302749902329090139/1304367871677300786/2024-11-08_12.51.21.png?ex=673468be&is=6733173e&hm=e2e0a33e3eca4f0909ed9a061fdb95203582b90260f95394c7f975352b96d4b4&]  
 10. Output → IP Blocked  
     ![][image2]
 
