@@ -22,25 +22,6 @@ In this stage, you will create a controller and commands for the follower.
   - When the player is higher (i.e., `Player` has a more negative `position.y` than the `Follower`), the `Follower` should use your `JumpCommand` to help reach the player.
 - A `FollowCommand` class that enables your `Follower` to be near the player. This class should `extend Command` and include a `leash` member variable representing a maximum distance between the `Follower` and the `Player`. When the two are greater than `leash` units apart, the command should end and `return Status.DONE`.
 
-You may wish to look at `boss.gd` for inspiration. Here is an outline to help you get started:  
-```gdscript
-class_name FollowerController
-extends Character 
-
-#useful data structure for sequentially enacting commands
-var cmd_list : Array[Command]
-
-#A reference to the Player
-@onready var player:Player = %Player
-
-func _ready():
-	#set movement and jump velocities
-
-func _physics_process(delta: float) -> void:
-	#controller logic
-	super(delta)
-```
-
 ## Stage 3: Death by a Thousand Cutscenes
 This game prototype needs some narrative design. Your task is to create a cutscene just before the boss battle to tell the current story to the player. This cutscene should be between 20 and 30 seconds long and include each of the three characters. 
 - Stage the characters in positions in the boss room. It is fine to teleport them to where they need to be.
