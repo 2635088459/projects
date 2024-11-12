@@ -1,4 +1,4 @@
-# Programming Excercise 1: Command Pattern
+# Programming Excercise 1: Command Pattern --- from class
 
 ## Description
 
@@ -7,47 +7,6 @@ to provide working experience with the command software design pattern. This pro
 to construct basic game systems including health, hit/hurt boxes, player movement, non-player character behavior,
 parallax scrolling, character movement, a camera that follows the player, animated sprites, boss fights, 
 and commands using the Command software design pattern.
-
-Your project will be score according to the following 70-point system:
-* [10 points] Stage 1 
-* [30 points] Stage 2
-* [15 points] Stage 3
-* [15 points] Stage 4
-
-The remaining 30 points will be based on your peer review of a classmate's programming exercise submission.
-
-### The Command Pattern ###
-
-Knowing the command software design pattern is critical to completing this assignment. Please consult the class recordings and readings to refresh yourself on the basic implementation details and use case for the pattern.  
-
-For this project, the core of the command pattern can be found in [command.gd](Rut/scripts/commands/command.gd). The two most important items to note are the structure of the `execute(character:Character) -> Status` function and the `enum Status`. The `execute()` function is the common interface that all commands in the project rely on. The return values of the commands are regularized with the `ACTIVE`, `DONE`, and `ERROR` values with the `Status` `enum`. 
-
-```gdscript
-class_name Command
-
-enum Status {
-	ACTIVE,
-	DONE,
-	ERROR,
-}
-
-func execute(_character: Character) -> Status:
-	return Status.DONE
-```
-
-There are two main categories of `Commands` used by the Characters. One is used by `Player` to handle the player's input in real time. It relies on the physics system, the `AnimationTree` in the `Player` scene, and a state machine embedded in the `AnimationTree.`  
-The second category is commands with durations. NPCs use these to ensure character actions are correctly timed. They are also used in command lists (seen as `cmd_list` in [boss.gd](Rut/scripts/boss.gd) to sequence actions for use in cutscenes and scripted boss battles. The following code fragment shows the processing engine of command lists and how they interact with `Command.Status` `enum` values.  
-
-```gdscript
-	if len(cmd_list)>0:
-		var command_status:Command.Status = cmd_list.front().execute(self)
-		#if command_status == Command.Status.ACTIVE:
-			#Useful for debugging and sending status updates to other nodes.
-		if Command.Status.DONE == command_status:
-			cmd_list.pop_front()
-	else:
-		animation_player.play("idle")
-```
 
 ## Stage 1: Jump to it
 Create a `JumpCommand` class that extends the `Command` class. This command should properly check to see if the `Player` `is_on_floor()` before initiating the jump. You need to provide an appropriate jump velocity that is consistent with the `Player` class so that the `Player` can jump over the obstacle in the level. Additionally, you are required to create a "jump" action in the project's `Input Map` that triggers when the `space`, `up`, or `W` is pressed.  
