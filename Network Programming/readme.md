@@ -42,7 +42,7 @@ Code 3: client.py
 * For the local ip address 127.0.0.1, If we want to test, then we just release it from comments 
 
 9. Output → Successful Ping-Pong:  
-   ![][image1]  
+   ![first][image1]  
 10. Output → IP Blocked  
     ![][image2]
 
