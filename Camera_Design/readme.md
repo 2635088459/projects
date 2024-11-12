@@ -1,23 +1,6 @@
 # Camera Control Exercise
 
-## Description
-
-Your goal is to create several swappable camera control scripts for a top-down terraforming simulator.
-
-Here is the document covered in class that details the type of camera controllers you are to implement for this exercise:  
-[Scroll Back: The Theory and Practice of Cameras in Side-Scrollers](https://docs.google.com/document/d/1iNSQIyNpVGHeak6isbP6AHdHD50gs8MNXF1GCf08efg/pub) by Itay Keren.  
-
-The images in the *Exercise Stages* section are taken from Itay Keren's document.
-
-### Grading
-
-Stage 1 is worth 10 points. Stages 2, 3, 4, and 5 are worth 15 points each. The stages are worth a total of 70 points. The remaining 30 points are for your peer review of another student's submission.
-
-### Due Date and Submission Information
-
-The due date for this exercise is listed in Canvas. The master branch, as found on your individual exercise repository, will be evaluated.
-
-## Exercise Stages 
+## Exercise Stages from class
 
 The following are the basic criteria for each stage:
 * Each stage requires you to implement a type of camera controller. 
