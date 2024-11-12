@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://dtm13sp1jsrwi"]
+
+[ext_resource type="Script" path="res://scripts/vessel.gd" id="1_gvlq5"]
+[ext_resource type="AudioStream" uid="uid://dawegxxwk8pqb" path="res://assets/audio/LASRBeam_Plasma Loop_01.wav" id="3_6xqm4"]
+[ext_resource type="AudioStream" uid="uid://df4yj8byubv05" path="res://assets/audio/EXPLDsgn_Explosion Rumble Distorted_01.wav" id="4_0msye"]
+[ext_resource type="Script" path="res://scripts/util/gpu_particle_fix.gd" id="4_y1eh5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ofegw"]
+albedo_color = Color(0.873002, 0.000607988, 0.872996, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nxuaw"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ewmjt"]
+direction = Vector3(0, 0, 0)
+spread = 20.172
+gravity = Vector3(0, 0, 0)
+color = Color(1, 1, 0.270588, 0.172549)
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fo0bd"]
+transparency = 1
+cull_mode = 2
+vertex_color_use_as_albedo = true
+emission_enabled = true
+emission_energy_multiplier = 11.04
+
+[sub_resource type="SphereMesh" id="SphereMesh_atlhb"]
+material = SubResource("StandardMaterial3D_fo0bd")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lr052"]
+streams_count = 1
+stream_0/stream = ExtResource("3_6xqm4")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_et32u"]
+streams_count = 1
+stream_0/stream = ExtResource("4_0msye")
+
+[node name="Vessel" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.238204, 0)
+script = ExtResource("1_gvlq5")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.1, 0, 0, 0, 0.5, 0, 0, 0)
+radius = 1.0
+material = SubResource("StandardMaterial3D_ofegw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_nxuaw")
+
+[node name="ParticleTrail" type="GPUParticles3D" parent="."]
+visible = false
+amount = 100
+lifetime = 0.75
+interp_to_end = 0.26
+fixed_fps = 90
+process_material = SubResource("ParticleProcessMaterial_ewmjt")
+draw_pass_1 = SubResource("SphereMesh_atlhb")
+script = ExtResource("4_y1eh5")
+enabled = true
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="Terraforming" type="AudioStreamPlayer2D" parent="Audio"]
+stream = SubResource("AudioStreamRandomizer_lr052")
+bus = &"SFX"
+
+[node name="HyperSpeed" type="AudioStreamPlayer2D" parent="Audio"]
+stream = SubResource("AudioStreamRandomizer_et32u")
+bus = &"SFX"

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu80st6dhcnla"]
+
+[ext_resource type="Script" path="res://scripts/camera_controllers/push_box.gd" id="1_og1vv"]
+
+[node name="CameraController" type="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 1, 0)
+script = ExtResource("1_og1vv")
