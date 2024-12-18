@@ -1,0 +1,17 @@
+res://scenes/world.tscn
+res://scenes/characters/punk_player.tscn
+res://scenes/characters/enemy_slime.tscn
+res://scenes/characters/merchant.tscn
+res://scenes/characters/enemy_samurai.tscn
+res://scenes/characters/enemy_dog.tscn
+res://scenes/characters/boss_slime.tscn
+res://scenes/characters/boss_ex1.tscn
+res://scenes/attacks/bullet.tscn
+res://scenes/attacks/bullet_3.tscn
+res://scenes/attacks/explosion.tscn
+res://scenes/attacks/player_damage_text.tscn
+res://scenes/attacks/slash_attack.tscn
+res://scenes/attacks/slime_explosion.tscn
+res://scenes/interactables/portal.tscn
+res://scenes/maps/map_one.tscn
+res://scenes/maps/map_two.tscn
