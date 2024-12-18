@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqixvixd6neyj"]
+
+[ext_resource type="Script" path="res://scripts/interactables/health_drop.gd" id="1_cxuwn"]
+[ext_resource type="Texture2D" uid="uid://do25ap0ds3hwk" path="res://assets/interface/heart.png" id="2_cnagx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bk8rb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icmgx"]
+
+[node name="Health" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_cxuwn")
+
+[node name="Hitbox" type="Area2D" parent="."]
+scale = Vector2(1.5, 1.5)
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_bk8rb")
+
+[node name="Icon" type="TextureRect" parent="."]
+z_index = 4096
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("2_cnagx")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_icmgx")

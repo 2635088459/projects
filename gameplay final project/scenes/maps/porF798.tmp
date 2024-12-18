@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1sbi12akmnlb"]
+
+[ext_resource type="Script" path="res://scenes/maps/portal.gd" id="1_r1l8g"]
+[ext_resource type="Texture2D" uid="uid://ck00e3okd8usa" path="res://assets/TileSet/4 Animated objects/portal.png" id="1_tef7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bk8rb"]
+size = Vector2(28, 30.6)
+
+[node name="Portal" type="Node2D"]
+scale = Vector2(5, 5)
+script = ExtResource("1_r1l8g")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-1, 1.3)
+shape = SubResource("RectangleShape2D_bk8rb")
+
+[node name="Icon" type="TextureRect" parent="."]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("1_tef7n")
+expand_mode = 1

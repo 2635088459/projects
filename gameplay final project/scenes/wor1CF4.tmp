@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd7k8bc0p4kn3"]
+
+[ext_resource type="PackedScene" uid="uid://unu2udtc35ev" path="res://scenes/interface/interface.tscn" id="1_gq3uh"]
+[ext_resource type="PackedScene" uid="uid://dw5phcjow8smu" path="res://scenes/maps/map_one.tscn" id="2_s3caw"]
+[ext_resource type="Script" path="res://scripts/camera/camera_controller.gd" id="3_k6uqh"]
+[ext_resource type="PackedScene" uid="uid://d2kv3yjh1sopj" path="res://scenes/characters/punk_player.tscn" id="5_30c2q"]
+
+[node name="World" type="Node2D"]
+
+[node name="Map" parent="." instance=ExtResource("2_s3caw")]
+
+[node name="Interface" parent="." instance=ExtResource("1_gq3uh")]
+
+[node name="MainCamera" type="Camera2D" parent="."]
+position = Vector2(592, 236)
+script = ExtResource("3_k6uqh")
+
+[node name="Player" parent="." instance=ExtResource("5_30c2q")]
+position = Vector2(582, 296)
+scale = Vector2(2, 2)

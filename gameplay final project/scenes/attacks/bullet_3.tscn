@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://baedl0dnfprbe"]
+
+[ext_resource type="Script" path="res://scripts/battle/bullet_linear.gd" id="1_c8thd"]
+[ext_resource type="Texture2D" uid="uid://cy56eeyvr1g1e" path="res://assets/player/free-guns-pack-2-for-main-characters-pixel-art/5 Bullets/3.png" id="1_xr4bj"]
+[ext_resource type="Script" path="res://scripts/battle/hit_box.gd" id="2_e0lbr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i24nk"]
+radius = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwbmj"]
+size = Vector2(7, 2)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 8
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 60
+script = ExtResource("1_c8thd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_i24nk")
+
+[node name="BulletShape" type="Sprite2D" parent="."]
+texture = ExtResource("1_xr4bj")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_e0lbr")
+damage = 25
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_kwbmj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

@@ -1,0 +1,336 @@
+[gd_scene load_steps=18 format=3 uid="uid://unu2udtc35ev"]
+
+[ext_resource type="Script" path="res://scripts/interface.gd" id="1_bsdsa"]
+[ext_resource type="Texture2D" uid="uid://do25ap0ds3hwk" path="res://assets/interface/heart.png" id="2_2e82t"]
+[ext_resource type="Texture2D" uid="uid://1450nt2jd4k8" path="res://assets/interface/coin.png" id="3_mfahl"]
+[ext_resource type="Texture2D" uid="uid://ccqvwdd1nbtmw" path="res://assets/interface/x.png" id="4_i723n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q32hf"]
+bg_color = Color(0.226707, 0.226708, 0.226707, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h733y"]
+bg_color = Color(1, 0.151344, 0.108333, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k11k5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ggbw4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5e30t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qolds"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40b3m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_33ewa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvaxu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q2ugo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbgun"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dxsuq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_en3n1"]
+
+[node name="Interface" type="Node2D"]
+script = ExtResource("1_bsdsa")
+coins = 1000
+level = 5
+health = 25
+max_health = 100
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Health" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Health"]
+layout_mode = 0
+offset_left = -122.0
+offset_top = 21.0
+offset_right = 170.0
+offset_bottom = 50.0
+theme_override_styles/background = SubResource("StyleBoxFlat_q32hf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_h733y")
+value = 50.0
+show_percentage = false
+
+[node name="Border" type="ColorRect" parent="CanvasLayer/Health"]
+z_index = -15
+layout_mode = 0
+offset_left = -128.0
+offset_top = 14.0
+offset_right = 176.0
+offset_bottom = 56.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Health"]
+layout_mode = 0
+offset_left = -151.0
+offset_top = 5.0
+offset_right = 449.0
+offset_bottom = 605.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_2e82t")
+
+[node name="Label" type="Label" parent="CanvasLayer/Health"]
+z_index = 2
+offset_left = -14.0
+offset_top = 20.0
+offset_right = 80.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "100/100"
+
+[node name="Coins" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Coins"]
+layout_mode = 2
+offset_left = -55.0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "1000"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Coins"]
+offset_left = -112.0
+offset_top = 8.0
+offset_right = 400.0
+offset_bottom = 520.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_mfahl")
+
+[node name="Level" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 48.0
+offset_bottom = 46.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Level"]
+layout_mode = 2
+offset_right = 108.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level: 0
+"
+
+[node name="Dialogue" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -41.0
+offset_right = -14.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Title" type="Label" parent="CanvasLayer/Dialogue"]
+z_index = 2
+layout_mode = 0
+offset_left = -202.0
+offset_top = -220.0
+offset_right = -83.0
+offset_bottom = -192.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Shop Owner"
+
+[node name="Text" type="Label" parent="CanvasLayer/Dialogue"]
+z_index = 2
+layout_mode = 0
+offset_left = -203.0
+offset_top = -178.0
+offset_right = 243.0
+offset_bottom = -89.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 17
+text = "Welcome! You can purchase upgrades with coins here."
+
+[node name="Background" type="ColorRect" parent="CanvasLayer/Dialogue"]
+z_index = -10
+layout_mode = 0
+offset_left = -222.0
+offset_top = -233.0
+offset_right = 257.0
+offset_bottom = -33.0
+color = Color(0, 0.196078, 0.384314, 1)
+
+[node name="Border" type="ColorRect" parent="CanvasLayer/Dialogue"]
+z_index = -15
+layout_mode = 0
+offset_left = -228.0
+offset_top = -238.0
+offset_right = 263.0
+offset_bottom = -26.0
+color = Color(0.992157, 0.709804, 0.0823529, 1)
+
+[node name="Cancel" type="Button" parent="CanvasLayer/Dialogue"]
+z_index = 2
+layout_mode = 0
+offset_left = 62.0
+offset_top = -82.0
+offset_right = 133.0
+offset_bottom = -48.0
+text = "Cancel"
+
+[node name="Confirm" type="Button" parent="CanvasLayer/Dialogue"]
+z_index = 2
+offset_left = 145.0
+offset_top = -82.0
+offset_right = 216.0
+offset_bottom = -48.0
+text = "Confirm"
+
+[node name="Shop" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -28.0
+offset_right = 39.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="CanvasLayer/Shop"]
+z_index = -10
+offset_left = -235.0
+offset_top = -177.0
+offset_right = 225.0
+offset_bottom = 273.0
+color = Color(0, 0.196078, 0.384314, 1)
+
+[node name="Border" type="ColorRect" parent="CanvasLayer/Shop"]
+z_index = -15
+offset_left = -241.0
+offset_top = -183.0
+offset_right = 229.0
+offset_bottom = 279.0
+color = Color(0.992157, 0.709804, 0.0823529, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Shop"]
+custom_minimum_size = Vector2(400, 350)
+layout_mode = 0
+offset_left = -208.0
+offset_top = -118.0
+offset_right = 212.0
+offset_bottom = 232.0
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Shop/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 4
+
+[node name="Title" type="Label" parent="CanvasLayer/Shop"]
+z_index = 2
+offset_left = -47.0
+offset_top = -163.0
+offset_right = 47.0
+offset_bottom = -135.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Upgrades"
+
+[node name="Close" type="TextureButton" parent="CanvasLayer/Shop"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = -169.0
+offset_right = 218.0
+offset_bottom = -145.0
+texture_normal = ExtResource("4_i723n")
+texture_pressed = ExtResource("4_i723n")
+texture_hover = ExtResource("4_i723n")
+texture_disabled = ExtResource("4_i723n")
+texture_focused = ExtResource("4_i723n")
+
+[node name="UpgradeItem" type="Control" parent="CanvasLayer/Shop"]
+visible = false
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+anchors_preset = 0
+offset_left = -208.0
+offset_top = -118.0
+offset_right = -118.0
+offset_bottom = -28.0
+
+[node name="Background" type="ColorRect" parent="CanvasLayer/Shop/UpgradeItem"]
+z_index = -1
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 90.0
+color = Color(0.156863, 0.156863, 0.156863, 0.576471)
+
+[node name="Cost" type="Label" parent="CanvasLayer/Shop/UpgradeItem"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 65.0
+offset_right = 77.0
+offset_bottom = 88.0
+text = "100"
+
+[node name="CoinIcon" type="TextureRect" parent="CanvasLayer/Shop/UpgradeItem"]
+offset_left = 16.0
+offset_top = 67.0
+offset_right = 528.0
+offset_bottom = 579.0
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("3_mfahl")
+
+[node name="Button" type="Button" parent="CanvasLayer/Shop/UpgradeItem"]
+z_index = 10
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 91.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k11k5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ggbw4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5e30t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_qolds")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_40b3m")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_33ewa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xvaxu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_q2ugo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sbgun")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dxsuq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_en3n1")
+
+[node name="Label" type="Label" parent="CanvasLayer/Shop/UpgradeItem"]
+layout_mode = 0
+offset_right = 91.0
+offset_bottom = 65.0
+text = "Max Health"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

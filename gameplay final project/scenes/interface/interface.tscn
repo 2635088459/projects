@@ -1,0 +1,485 @@
+[gd_scene load_steps=10 format=3 uid="uid://unu2udtc35ev"]
+
+[ext_resource type="Script" path="res://scripts/interface/interface.gd" id="1_bsdsa"]
+[ext_resource type="Texture2D" uid="uid://do25ap0ds3hwk" path="res://assets/interface/heart.png" id="2_2e82t"]
+[ext_resource type="Texture2D" uid="uid://1450nt2jd4k8" path="res://assets/interface/coin.png" id="3_mfahl"]
+[ext_resource type="Texture2D" uid="uid://ccqvwdd1nbtmw" path="res://assets/interface/x.png" id="4_i723n"]
+[ext_resource type="AudioStream" uid="uid://ce6cmsfpkxtcl" path="res://assets/audio/sound_effects/npc_sounds/npc_purchase_done_audio/09. Carl - You Can't Afford That.wav" id="5_p8vna"]
+[ext_resource type="AudioStream" uid="uid://di73jlcqmmk4s" path="res://assets/audio/sound_effects/npc_sounds/npc_purchase_done_audio/07. Carl - Be Careful With That.wav" id="6_h2w4c"]
+[ext_resource type="AudioStream" uid="uid://crv24736f3dm8" path="res://assets/audio/sound_effects/npc_sounds/npc_purchase_done_audio/11. Carl - Come Back Any Time.wav" id="7_b8nxe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q32hf"]
+bg_color = Color(0.226707, 0.226708, 0.226707, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h733y"]
+bg_color = Color(1, 0.151344, 0.108333, 1)
+
+[node name="Interface" type="Node2D"]
+script = ExtResource("1_bsdsa")
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+[node name="Health" type="Control" parent="Canvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="Canvas/Health"]
+layout_mode = 0
+offset_left = -122.0
+offset_top = 21.0
+offset_right = 170.0
+offset_bottom = 50.0
+theme_override_styles/background = SubResource("StyleBoxFlat_q32hf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_h733y")
+value = 50.0
+show_percentage = false
+
+[node name="Border" type="ColorRect" parent="Canvas/Health"]
+z_index = -15
+layout_mode = 0
+offset_left = -128.0
+offset_top = 14.0
+offset_right = 176.0
+offset_bottom = 56.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Canvas/Health"]
+layout_mode = 0
+offset_left = -151.0
+offset_top = 5.0
+offset_right = 449.0
+offset_bottom = 605.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_2e82t")
+
+[node name="Label" type="Label" parent="Canvas/Health"]
+z_index = 2
+layout_mode = 0
+offset_left = -14.0
+offset_top = 20.0
+offset_right = 80.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "100/100"
+
+[node name="Coins" type="Control" parent="Canvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Canvas/Coins"]
+layout_mode = 2
+offset_left = -55.0
+offset_top = 10.0
+offset_right = 25.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "1000"
+
+[node name="TextureRect" type="TextureRect" parent="Canvas/Coins"]
+layout_mode = 0
+offset_left = -112.0
+offset_top = 8.0
+offset_right = 400.0
+offset_bottom = 520.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_mfahl")
+
+[node name="Level" type="Control" parent="Canvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 48.0
+offset_bottom = 46.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Canvas/Level"]
+layout_mode = 2
+offset_right = 108.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level: 0
+"
+
+[node name="Dialogue" type="Control" parent="Canvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -41.0
+offset_right = -14.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Title" type="Label" parent="Canvas/Dialogue"]
+z_index = 2
+layout_mode = 0
+offset_left = -202.0
+offset_top = -220.0
+offset_right = -83.0
+offset_bottom = -192.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Shop Owner"
+
+[node name="Text" type="Label" parent="Canvas/Dialogue"]
+z_index = 2
+layout_mode = 0
+offset_left = -203.0
+offset_top = -178.0
+offset_right = 243.0
+offset_bottom = -89.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 17
+text = "Welcome! You can purchase upgrades with coins here. Press right click to refund upgrades!"
+autowrap_mode = 1
+
+[node name="Background" type="ColorRect" parent="Canvas/Dialogue"]
+z_index = -10
+layout_mode = 0
+offset_left = -222.0
+offset_top = -233.0
+offset_right = 257.0
+offset_bottom = -33.0
+color = Color(0, 0.196078, 0.384314, 1)
+
+[node name="Border" type="ColorRect" parent="Canvas/Dialogue"]
+z_index = -15
+layout_mode = 0
+offset_left = -228.0
+offset_top = -238.0
+offset_right = 263.0
+offset_bottom = -26.0
+color = Color(0.992157, 0.709804, 0.0823529, 1)
+
+[node name="Cancel" type="Button" parent="Canvas/Dialogue"]
+z_index = 2
+layout_mode = 0
+offset_left = 62.0
+offset_top = -82.0
+offset_right = 133.0
+offset_bottom = -48.0
+focus_mode = 0
+text = "Cancel"
+
+[node name="Confirm" type="Button" parent="Canvas/Dialogue"]
+z_index = 2
+layout_mode = 0
+offset_left = 145.0
+offset_top = -82.0
+offset_right = 216.0
+offset_bottom = -48.0
+focus_mode = 0
+text = "Confirm"
+
+[node name="Shop" type="Control" parent="Canvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -28.0
+offset_right = 39.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Canvas/Shop"]
+z_index = -10
+layout_mode = 0
+offset_left = -235.0
+offset_top = -177.0
+offset_right = 225.0
+offset_bottom = 273.0
+color = Color(0, 0.196078, 0.384314, 1)
+
+[node name="Border" type="ColorRect" parent="Canvas/Shop"]
+z_index = -15
+layout_mode = 0
+offset_left = -241.0
+offset_top = -183.0
+offset_right = 230.0
+offset_bottom = 279.0
+color = Color(0.992157, 0.709804, 0.0823529, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Canvas/Shop"]
+custom_minimum_size = Vector2(400, 350)
+layout_mode = 0
+offset_left = -208.0
+offset_top = -118.0
+offset_right = 212.0
+offset_bottom = 232.0
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="Canvas/Shop/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 4
+
+[node name="Title" type="Label" parent="Canvas/Shop"]
+z_index = 2
+layout_mode = 0
+offset_left = -47.0
+offset_top = -163.0
+offset_right = 47.0
+offset_bottom = -135.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Upgrades"
+
+[node name="Close" type="TextureButton" parent="Canvas/Shop"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = -169.0
+offset_right = 218.0
+offset_bottom = -145.0
+texture_normal = ExtResource("4_i723n")
+texture_pressed = ExtResource("4_i723n")
+texture_hover = ExtResource("4_i723n")
+texture_disabled = ExtResource("4_i723n")
+texture_focused = ExtResource("4_i723n")
+
+[node name="UpgradeItem" type="Control" parent="Canvas/Shop"]
+visible = false
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+anchors_preset = 0
+offset_left = -208.0
+offset_top = -118.0
+offset_right = -118.0
+offset_bottom = -28.0
+
+[node name="Cost" type="Label" parent="Canvas/Shop/UpgradeItem"]
+z_index = 12
+layout_mode = 0
+offset_left = 37.0
+offset_top = 65.0
+offset_right = 77.0
+offset_bottom = 88.0
+text = "100"
+
+[node name="CoinIcon" type="TextureRect" parent="Canvas/Shop/UpgradeItem"]
+z_index = 12
+layout_mode = 0
+offset_left = 16.0
+offset_top = 67.0
+offset_right = 528.0
+offset_bottom = 579.0
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("3_mfahl")
+
+[node name="Button" type="Button" parent="Canvas/Shop/UpgradeItem"]
+z_index = 10
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 91.0
+focus_mode = 0
+
+[node name="Label" type="Label" parent="Canvas/Shop/UpgradeItem"]
+z_index = 12
+layout_mode = 0
+offset_right = 91.0
+offset_bottom = 65.0
+text = "Max Health"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="StartScreen" type="Control" parent="Canvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Canvas/StartScreen"]
+visible = false
+z_index = 100
+layout_mode = 0
+offset_left = -68297.0
+offset_top = -59708.0
+offset_right = -66864.0
+offset_bottom = -58877.0
+scale = Vector2(99.0729, 956.422)
+color = Color(0, 0.12549, 0.2, 1)
+
+[node name="Title" type="Label" parent="Canvas/StartScreen"]
+z_index = 111
+layout_mode = 0
+offset_left = -354.0
+offset_top = -111.0
+offset_right = 427.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.12549, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.647757, 0.537671, 0.58942, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 100
+text = "Cyberpunk 2088"
+
+[node name="Button" type="Button" parent="Canvas/StartScreen"]
+z_index = 122
+layout_mode = 0
+offset_left = -90.0
+offset_top = 65.0
+offset_right = 151.0
+offset_bottom = 127.0
+focus_mode = 0
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "Start Game"
+
+[node name="ButtonBackground" type="ColorRect" parent="Canvas/StartScreen"]
+z_index = 112
+layout_mode = 0
+offset_left = -83.0
+offset_top = 72.0
+offset_right = 144.0
+offset_bottom = 120.0
+mouse_filter = 2
+color = Color(1, 0.839216, 0.0666667, 1)
+
+[node name="Blackout" type="Control" parent="Canvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(98.9743, 672.317)
+
+[node name="Background" type="ColorRect" parent="Canvas/Blackout"]
+z_index = 100
+layout_mode = 0
+offset_left = -690.0
+offset_top = -392.0
+offset_right = 743.0
+offset_bottom = 439.0
+color = Color(0, 0.12549, 0.2, 1)
+
+[node name="EndScreen" type="Control" parent="Canvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Canvas/EndScreen"]
+visible = false
+z_index = 100
+layout_mode = 0
+offset_left = -690.0
+offset_top = -392.0
+offset_right = 743.0
+offset_bottom = 439.0
+color = Color(0, 0.12549, 0.2, 1)
+
+[node name="Title" type="Label" parent="Canvas/EndScreen"]
+z_index = 111
+layout_mode = 0
+offset_left = -354.0
+offset_top = -111.0
+offset_right = 427.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.775063, 0.775063, 0.775063, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.12549, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.647757, 0.537671, 0.58942, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 100
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Canvas/EndScreen"]
+z_index = 122
+layout_mode = 0
+offset_left = -90.0
+offset_top = 65.0
+offset_right = 151.0
+offset_bottom = 127.0
+focus_mode = 0
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "New Game"
+
+[node name="ButtonBackground" type="ColorRect" parent="Canvas/EndScreen"]
+z_index = 112
+layout_mode = 0
+offset_left = -83.0
+offset_top = 72.0
+offset_right = 144.0
+offset_bottom = 120.0
+mouse_filter = 2
+color = Color(1, 0.839216, 0.0666667, 1)
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="09_Carl-YouCan\'tAffordThat" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("5_p8vna")
+
+[node name="07_Carl-BeCarefulWithThat" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("6_h2w4c")
+
+[node name="11_Carl-ComeBackAnyTime" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("7_b8nxe")

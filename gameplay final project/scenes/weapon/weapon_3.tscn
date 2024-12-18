@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://rcm2x757gab6"]
+
+[ext_resource type="Script" path="res://scripts/battle/weapon.gd" id="1_yag5k"]
+[ext_resource type="Texture2D" uid="uid://bqrgkfujr54nu" path="res://assets/player/free-guns-pack-2-for-main-characters-pixel-art/2 Guns/3_1.png" id="2_tfi52"]
+
+[node name="Weapon" type="Node2D"]
+position = Vector2(0, 6)
+script = ExtResource("1_yag5k")
+
+[node name="EndPoint" type="Node2D" parent="."]
+position = Vector2(13, -2)
+
+[node name="StartPoint" type="Node2D" parent="."]
+position = Vector2(-2, -2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 0)
+texture = ExtResource("2_tfi52")

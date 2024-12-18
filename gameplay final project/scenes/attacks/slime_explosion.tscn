@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://d08me1q4fajlp"]
+
+[ext_resource type="Script" path="res://scripts/battle/slime_explosion.gd" id="1_h2kod"]
+
+[sub_resource type="Curve" id="Curve_0274f"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_nhn0t"]
+offsets = PackedFloat32Array(0.559211, 0.986842)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlkla"]
+
+[node name="SlimeExplosion" type="Node2D"]
+script = ExtResource("1_h2kod")
+
+[node name="Particle" type="CPUParticles2D" parent="."]
+self_modulate = Color(0.641095, 0.0187833, 0.0116489, 1)
+emitting = false
+amount = 25
+one_shot = true
+speed_scale = 1.5
+explosiveness = 1.0
+lifetime_randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 50.0
+scale_amount_min = 20.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_0274f")
+color_ramp = SubResource("Gradient_nhn0t")
+
+[node name="Hitbox" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+collision_layer = 7
+collision_mask = 4
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_rlkla")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8wqhdl3hpoph"]
+
+[ext_resource type="Script" path="res://scripts/interactables/teleport.gd" id="1_ac6o4"]
+[ext_resource type="Texture2D" uid="uid://dwn4h5y7m0n0o" path="res://assets/player/teleport.png" id="2_bh2vx"]
+
+[node name="Teleport" type="Node2D"]
+script = ExtResource("1_ac6o4")
+
+[node name="Icon" type="TextureRect" parent="."]
+modulate = Color(0.0509804, 0.988235, 1, 1)
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+scale = Vector2(1.4, 1.4)
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("2_bh2vx")
+expand_mode = 1
