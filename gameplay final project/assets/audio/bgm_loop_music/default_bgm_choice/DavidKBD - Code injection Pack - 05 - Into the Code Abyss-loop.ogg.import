@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://mvma47rfm6yh"
+path="res://.godot/imported/DavidKBD - Code injection Pack - 05 - Into the Code Abyss-loop.ogg-8297b24d436043b1ee9ed3a9aa2204ed.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/bgm_loop_music/default_bgm_choice/DavidKBD - Code injection Pack - 05 - Into the Code Abyss-loop.ogg"
+dest_files=["res://.godot/imported/DavidKBD - Code injection Pack - 05 - Into the Code Abyss-loop.ogg-8297b24d436043b1ee9ed3a9aa2204ed.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

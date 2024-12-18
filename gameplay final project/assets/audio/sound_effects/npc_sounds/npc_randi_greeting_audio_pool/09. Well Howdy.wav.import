@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bw10qed1ycmwl"
+path="res://.godot/imported/09. Well Howdy.wav-d9c689d23d17731f0cb13a77090581fd.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_randi_greeting_audio_pool/09. Well Howdy.wav"
+dest_files=["res://.godot/imported/09. Well Howdy.wav-d9c689d23d17731f0cb13a77090581fd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

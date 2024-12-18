@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://by13paxuw1bw"
+path="res://.godot/imported/06. Carl - I Got Lots of Guns.wav-29d92b3e942fb21400338aec1c7f531a.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_randi_greeting_audio_pool/06. Carl - I Got Lots of Guns.wav"
+dest_files=["res://.godot/imported/06. Carl - I Got Lots of Guns.wav-29d92b3e942fb21400338aec1c7f531a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

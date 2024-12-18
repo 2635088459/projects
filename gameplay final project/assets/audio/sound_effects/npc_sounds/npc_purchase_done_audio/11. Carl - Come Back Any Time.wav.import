@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cvkt1wl6bpcgu"
+path="res://.godot/imported/11. Carl - Come Back Any Time.wav-39d7641885b3a23429380fb8941ef476.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_purchase_done_audio/11. Carl - Come Back Any Time.wav"
+dest_files=["res://.godot/imported/11. Carl - Come Back Any Time.wav-39d7641885b3a23429380fb8941ef476.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

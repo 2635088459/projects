@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c4o52lrw5j3gl"
+path="res://.godot/imported/15. Bartolemeu - Spectacular Choice.wav-5aa00e3211e69312d2b19f64f4b64389.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_purchase_done_audio/15. Bartolemeu - Spectacular Choice.wav"
+dest_files=["res://.godot/imported/15. Bartolemeu - Spectacular Choice.wav-5aa00e3211e69312d2b19f64f4b64389.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

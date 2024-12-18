@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcgdbl30bs8rk"
+path="res://.godot/imported/DavidKBD - Code injection Pack - 06 - Electric Inferno-loop.ogg-404b1477e9e01ab05e937f94ffcb600d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/bgm_loop_music/boss_bgm_choices/DavidKBD - Code injection Pack - 06 - Electric Inferno-loop.ogg"
+dest_files=["res://.godot/imported/DavidKBD - Code injection Pack - 06 - Electric Inferno-loop.ogg-404b1477e9e01ab05e937f94ffcb600d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

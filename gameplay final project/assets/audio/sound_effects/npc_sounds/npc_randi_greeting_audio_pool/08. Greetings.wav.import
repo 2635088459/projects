@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpu67a7ted6t2"
+path="res://.godot/imported/08. Greetings.wav-a2944f1747576a224aa80b1de913d7cc.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_randi_greeting_audio_pool/08. Greetings.wav"
+dest_files=["res://.godot/imported/08. Greetings.wav-a2944f1747576a224aa80b1de913d7cc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

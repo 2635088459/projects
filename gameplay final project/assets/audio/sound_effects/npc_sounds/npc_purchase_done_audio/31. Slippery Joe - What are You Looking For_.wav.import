@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dv6s1uw2fkx7e"
+path="res://.godot/imported/31. Slippery Joe - What are You Looking For_.wav-3fcfa1bd87982e84c3f6ed221a6d6265.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_purchase_done_audio/31. Slippery Joe - What are You Looking For_.wav"
+dest_files=["res://.godot/imported/31. Slippery Joe - What are You Looking For_.wav-3fcfa1bd87982e84c3f6ed221a6d6265.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

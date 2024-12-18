@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dek744jfektf7"
+path="res://.godot/imported/05. Welcome.wav-7817927bdad38229486ebe97e2f42be5.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_randi_greeting_audio_pool/05. Welcome.wav"
+dest_files=["res://.godot/imported/05. Welcome.wav-7817927bdad38229486ebe97e2f42be5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

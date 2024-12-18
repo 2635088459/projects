@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bkt1y2cwy57q5"
+path="res://.godot/imported/06. I'd Recognize that Face Anywhere.wav-5852c00f4fbadd693f5ec1041ad6b377.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_randi_greeting_audio_pool/06. I'd Recognize that Face Anywhere.wav"
+dest_files=["res://.godot/imported/06. I'd Recognize that Face Anywhere.wav-5852c00f4fbadd693f5ec1041ad6b377.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://yh22hlu7681j"
+path="res://.godot/imported/25. Mr. Frank - Too Expensive for You.wav-14746c3393b43202debd56da96423a99.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_purchase_done_audio/25. Mr. Frank - Too Expensive for You.wav"
+dest_files=["res://.godot/imported/25. Mr. Frank - Too Expensive for You.wav-14746c3393b43202debd56da96423a99.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

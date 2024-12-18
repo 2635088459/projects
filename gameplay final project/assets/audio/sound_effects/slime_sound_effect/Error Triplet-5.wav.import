@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://u58os263kwp7"
+path="res://.godot/imported/Error Triplet-5.wav-603117e9999d1e541667f3c175f57734.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/slime_sound_effect/Error Triplet-5.wav"
+dest_files=["res://.godot/imported/Error Triplet-5.wav-603117e9999d1e541667f3c175f57734.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

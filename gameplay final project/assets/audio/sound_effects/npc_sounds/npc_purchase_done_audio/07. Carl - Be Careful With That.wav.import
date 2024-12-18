@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c046dybkimh7"
+path="res://.godot/imported/07. Carl - Be Careful With That.wav-db2c327800224a2592843ce904c17578.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_purchase_done_audio/07. Carl - Be Careful With That.wav"
+dest_files=["res://.godot/imported/07. Carl - Be Careful With That.wav-db2c327800224a2592843ce904c17578.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

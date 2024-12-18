@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://elpne40osl1h"
+path="res://.godot/imported/09. Carl - You Can't Afford That.wav-5279cd179f83bb15a6e33a8f3fb3afb5.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_purchase_done_audio/09. Carl - You Can't Afford That.wav"
+dest_files=["res://.godot/imported/09. Carl - You Can't Afford That.wav-5279cd179f83bb15a6e33a8f3fb3afb5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

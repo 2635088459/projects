@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ctjo6vwfpcyh2"
+path="res://.godot/imported/26. Mr. Frank - Good Choice.wav-ea4c46cf5678c32b6a2faddc8b1ea7c9.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_purchase_done_audio/26. Mr. Frank - Good Choice.wav"
+dest_files=["res://.godot/imported/26. Mr. Frank - Good Choice.wav-ea4c46cf5678c32b6a2faddc8b1ea7c9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

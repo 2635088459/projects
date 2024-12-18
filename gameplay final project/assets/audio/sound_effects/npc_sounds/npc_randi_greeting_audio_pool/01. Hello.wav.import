@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwjrapa4lo12w"
+path="res://.godot/imported/01. Hello.wav-844d3a28aa65242c1c6a520d70c59cf5.sample"
+
+[deps]
+
+source_file="res://assets/audio/sound_effects/npc_sounds/npc_randi_greeting_audio_pool/01. Hello.wav"
+dest_files=["res://.godot/imported/01. Hello.wav-844d3a28aa65242c1c6a520d70c59cf5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
